@@ -1,0 +1,35 @@
+.agent-card {
+  position: relative;
+  height: 9rem;
+
+}
+
+.agent-card-border {
+  background-color: white;
+  margin-top: 5rem;
+  border-style: solid;
+  border-color: #CCC;
+  border-width: 0.1rem;
+/*  -webkit-box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.53);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.53);
+  box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.53); */ 
+}
+
+.agent-name {
+  width: 8rem;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.agent-account {
+  width: 8rem;
+  word-wrap: break-word;
+  font-style: italic;
+}
+
+.agent-search {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+}

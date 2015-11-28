@@ -1,0 +1,8 @@
+<md-content ng-show="vm.items[0]" class="md-whiteframe-z1" layout-padding>
+  <h2 class="md-title">
+    <span ng-repeat="item in vm.items">
+      {{ item.toUpperCase() }} <md-icon ng-hide="$last">keyboard_arrow_right</md-icon>
+    <span>
+  </h2>
+</md-content>
+

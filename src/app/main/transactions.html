@@ -1,0 +1,26 @@
+<navbar class="md-whiteframe-z1" ng-cloak></navbar>
+<div class="wrapper" layout="row" layout-fill>
+  <menu></menu>
+  <div flex layout-padding layout="column">
+    <breadcrumbs items="['-', 'Transactions']"></breadcrumbs>
+    <div class="max-78-rem" layout="row" layout-wrap>
+      <md-grid-list layout-fill layout-padding md-cols-sm="2" md-cols-md="3" md-cols-lg="4" md-cols-gt-lg="5" md-gutter="1rem" md-row-height="10:12" md-row-height-md="8:9" md-row-height-lg="8:11">
+        <md-grid-tile ng-repeat="el in main.orders | filter: { status: 'Delivered' }">
+          <md-content flex class="md-whiteframe-z1" layout-align="center center" layout="column">
+            <img ng-src="{{ el.imgSrc }}" style="border-radius: 50%; margin-top: 1rem;">
+            <md-list layout-align="center center">
+              <md-list-item class="md-3-line">
+                <div class="md-list-item-text" layout="column" layout-align="center center">
+                  <h3>{{ el.customerName }}</h3>
+                  <h4 ng-class="el.status === 'Delivered' ? 'delivered' : 'pending'"><md-button>{{ el.status }}</md-button></h4>
+                  <p>{{ el.dateDelivered ? el.dateDelivered.getFullYear() : el.orderDate.getFullYear() }} / {{ el.dateDelivered ? el.dateDelivered.getMonth() : el.orderDate.getMonth() }} / {{ el.dateDelivered ? el.dateDelivered.getDate() : el.orderDate.getDate() }}</p>
+                </div>
+              </md-list-item>
+            </md-list>
+          </md-content>
+        </md-grid-tile>
+      </md-grid-list>
+    </div> 
+  </div>
+</div>
+<md-button ng-click="main.addObama($event)" class="md-fab md-fab-bottom-right"><md-icon>add</md-icon></md-button>

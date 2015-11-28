@@ -1,0 +1,19 @@
+#profile-wrapper{
+  margin-top: 3rem;
+}
+
+#main-details {
+  background-image: url("https://lh3.googleusercontent.com/-TtZ8a2i9KsM/UYFKqR5KewI/AAAAAAAABiI/VvuOY_VEJQc/w728-h1600/default_cover_2_ae125d34a6150400a2a97f22e218a904.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: auto center;
+  padding: 1rem;
+}
+  
+@media screen and (min-width: 47.44rem) {
+  #profile-wrapper {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 47.44rem !important;
+  }
+}  

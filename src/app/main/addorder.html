@@ -1,0 +1,34 @@
+<md-dialog aria-label="Add Order" flex="50" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.save()">
+          <md-icon>save</md-icon>
+        </md-button>
+        <md-button class="md-icon-button md-warn" ng-click="vm.close()">
+          <md-icon>cancel</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div layout="column">
+          <md-input-container flex>
+            <label>Customer Name</label>
+            <input ng-model="vm.order.customerName">
+          </md-input-container>
+        </div>
+        <md-datepicker flex ng-model="vm.order.orderDate" md-placeholder="Enter order date"></md-datepicker>
+        <md-input-container flex>
+          <label>Image URL</label>
+          <input ng-model="vm.order.imgSrc">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Address</label>
+          <input ng-model="vm.order.address">
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

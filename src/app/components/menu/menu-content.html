@@ -1,0 +1,13 @@
+<md-sidenav md-component-id="right" md-is-locked-open="$mdMedia('gt-md')">
+  <md-list>
+    <md-subheader class="md-no-sticky">Modules</md-subheader>
+    <md-list-item ng-click="vm.go('orders')">
+      <md-icon>shopping_cart</md-icon>
+      <p>Orders</p>
+    </md-list-item>
+    <md-list-item ng-click="vm.go('transactions')">
+      <md-icon>history</md-icon>
+      <p>Transaction History</p>
+    </md-list-item>
+  </md-list>
+</md-sidenav>

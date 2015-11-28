@@ -1,0 +1,16 @@
+<md-toolbar layout="row" layout-align="center center">
+  <md-button class="md-icon-button"  ng-hide="vm.isShow()" ng-click="vm.showSidenav()"><md-icon>menu</md-icon></md-button>
+  <span flex></span>
+  <md-menu>
+    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)"><md-icon>more_vert<md-icon></md-button>
+    <md-menu-content>
+      <md-menu-item>
+        <md-button><md-icon>settings</md-icon> Settings</md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button href="#/login"><md-icon>exit_to_app</md-icon> Logout</md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+</md-toolbar>
+

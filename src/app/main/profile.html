@@ -1,0 +1,28 @@
+<navbar class="md-whiteframe-z2" ng-cloak></navbar>
+<div class="wrapper" layout="row" layout-fill>
+  <menu></menu>
+  <div flex layout-padding>
+    <breadcrumbs items="['Hello', 'HLKJ']"></breadcrumbs>
+    <div flex-sm="100" id="profile-wrapper">
+      <!-- Main Detail -->
+      <div flex="100" layout="column" layout-align="center center" id="main-details" class="profile-card">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRH7Fl9T6aeSjRyUkSql_DRlqpedxpyrWk5Zn8D2XKl--O_dWDqTg">
+        <span flex="grow" class="md-headline" id="profile-name">Dela Cruz, Puutty</span>
+      </div>
+      <!-- Other Details -->
+      <div layout="row" layout-sm="column">
+        <!-- Column -->
+        <div layout-gt-sm="column" flex="50" flex-sm="100" layout-wrap>
+          <profile-card ng-repeat="profileCard in hr.profileCards"></profile-card>
+        </div>
+        <!-- Column -->
+        <div layout-gt-sm="column" flex="50" flex-sm="100" layout-wrap>
+          <profile-card ng-repeat="profileCard in hr.profileCards"></profile-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<md-button class="md-fab md-fab-bottom-right" aria-label="Eat cake">
+  <md-icon>add</md-icon>
+</md-button>

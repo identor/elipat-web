@@ -1,0 +1,14 @@
+@media screen and (min-width: 78rem) {
+  .max-78-rem {
+    margin: 0 auto;
+    width: 59rem !important;
+  }
+}
+
+.pending {
+  background-color: #f44336;	
+}
+
+.delivered {
+  background-color:  #4caf50;
+}
