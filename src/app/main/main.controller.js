@@ -36,6 +36,32 @@
       }
     ];
 
+    vm.update = function (ev, i) {
+      var order = vm.orders[i];
+      $mdDialog.show({
+        controller: function () {
+          var dialog  = this;
+
+          dialog.order = {};
+
+          dialog.save = function () {
+            $mdDialog.hide(dialog.order);
+          };
+
+          dialog.close = function () {
+            $mdDialog.cancel();
+          };
+        },
+        controllerAs: 'vm',
+        templateUrl: 'app/main/editorder.html',
+        parent: $document.body,
+        targetEvent: ev
+      }).then(function (order) {
+        vm.orders[i].status = 'Delivered';
+        vm.orders[i].dateDelivered = order.dateDelivered;
+      });
+    };
+
     vm.addObama = function (ev) {
       $mdDialog.show({
         controller: function () {

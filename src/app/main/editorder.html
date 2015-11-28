@@ -1,0 +1,20 @@
+<md-dialog aria-label="Add Order" flex="20" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.save()">
+          <md-icon>save</md-icon>
+        </md-button>
+        <md-button class="md-icon-button md-warn" ng-click="vm.close()">
+          <md-icon>cancel</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-datepicker flex ng-model="vm.order.dateDelivered" md-placeholder="Enter order date"></md-datepicker>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

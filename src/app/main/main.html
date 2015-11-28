@@ -12,8 +12,8 @@
               <md-list-item class="md-3-line">
                 <div class="md-list-item-text" layout="column" layout-align="center center">
                   <h3>{{ el.customerName }}</h3>
-                  <h4 ng-class="el.status === 'Delivered' ? 'delivered' : 'pending'"><md-button>{{ el.status }}</md-button></h4>
-                  <p>{{ el.dateDelivered ? el.dateDelivered.getFullYear() : el.orderDate.getFullYear() }} / {{ el.dateDelivered ? el.dateDelivered.getMonth() : el.orderDate.getMonth() }} / {{ el.dateDelivered ? el.dateDelivered.getDate() : el.orderDate.getDate() }}</p>
+                  <h4 ng-class="el.status === 'Delivered' ? 'delivered' : 'pending'"><md-button ng-click="main.update($event, $index)">{{ el.status }}</md-button></h4>
+                  <p>{{ el.dateDelivered ? el.dateDelivered.getFullYear() : el.orderDate.getFullYear() }} / {{ el.dateDelivered ? el.dateDelivered.getMonth()+1 : el.orderDate.getMonth()+1 }} / {{ el.dateDelivered ? el.dateDelivered.getDate() : el.orderDate.getDate() }}</p>
                 </div>
               </md-list-item>
             </md-list>
